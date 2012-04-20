@@ -1,0 +1,2 @@
+export PS1="\h:\W[\t] "
+export CLICOLOR=1

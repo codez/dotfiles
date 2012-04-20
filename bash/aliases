@@ -1,0 +1,13 @@
+alias ll='ls -al'
+alias cd..='cd ..'
+
+alias e='open -t'
+
+alias gits='git status'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+
+
+# changing directory to code project
+function c { cd ~/Code/$1; }
+
