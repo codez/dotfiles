@@ -1,0 +1,16 @@
+= Pascal Zumkehr Dot Files
+
+These are config files to set up a system the way I like it.
+
+Thankfully copied from http://github.com/ryanb/dotfiles.
+
+== Installation
+
+  git clone git://github.com/codez/dotfiles ~/.dotfiles
+  cd ~/.dotfiles
+  rake install
+
+
+If there are some shell configuration settings which you want secure or 
+specific to one system, place it into a ~/.localrc file. This will be 
+loaded automatically if it exists.
