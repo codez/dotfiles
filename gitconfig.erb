@@ -1,12 +1,14 @@
 [user]
 	name = Pascal Zumkehr
-	email = spam@codez.ch
+#	email = spam@codez.ch
 [alias]
 	co = checkout
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+	interactive = auto
+	ui = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	autocrlf = input
@@ -14,5 +16,7 @@
 	whitespace = nowarn
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[push]
+	default = current
 [github]
 	user = codez
