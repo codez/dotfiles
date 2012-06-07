@@ -1,11 +1,13 @@
 require 'rubygems'
 
-def extend_irb(gem)
+@@warnings = {}
+
+def extend_irb(lib)
   begin
-    require gem
+    require lib
     yield if block_given?
   rescue LoadError => err
-    warn "Could not load #{gem}: #{err}"
+    @@warnings[lib] = err.message
   end
 end
 
@@ -34,6 +36,8 @@ extend_irb 'ap' do
   end 
 end
 
+
+
 # print log messages to irb console
 if defined?(Rails) && Rails.env
   if Rails.logger
@@ -42,3 +46,4 @@ if defined?(Rails) && Rails.env
  end
 end
 
+warn "Could not load #{@@warnings.keys.join(', ')}" unless @@warnings.empty?
