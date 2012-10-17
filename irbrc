@@ -20,12 +20,6 @@ extend_irb 'wirble' do
   Wirble.colorize
 end
 
-# output active records as tables
-extend_irb 'hirb' do
-  Hirb.enable
-  extend Hirb::Console
-end
-
 # output structured objects
 extend_irb 'ap' do
   alias pp ap
@@ -33,10 +27,14 @@ extend_irb 'ap' do
     def output_value
       ap @context.last_value
     end
-  end 
+  end
 end
 
-
+# output active records as tables
+extend_irb 'hirb' do
+  Hirb.enable
+  extend Hirb::Console
+end
 
 # print log messages to irb console
 if defined?(Rails) && Rails.env
