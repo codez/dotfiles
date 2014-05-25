@@ -1,4 +1,4 @@
-alias ll='ls -al --color'
+alias ll='ls -alG'
 alias cd..='cd ..'
 
 # Mac: Open file in editor
