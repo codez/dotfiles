@@ -22,10 +22,10 @@ PATH=$PATH:$HOME/.rvm/bin
 EDITOR=vim
 
 # tune ruby gc with 37 signals
-RUBY_HEAP_MIN_SLOTS=600000 # This is 60(!) times larger than default
-RUBY_GC_MALLOC_LIMIT=59000000 # This is 7 times larger than default
-RUBY_HEAP_FREE_MIN=100000 # This is 24 times larger than default
+export RUBY_GC_HEAP_INIT_SLOTS=600000 # This is 60(!) times larger than default
+export RUBY_GC_MALLOC_LIMIT=59000000 # This is 7 times larger than default
+export RUBY_HEAP_FREE_MIN=100000 # This is 24 times larger than default
 
 # do not show all kinds of warnings
-RUBYOPT="-W1"
+export RUBYOPT="-W1"
 
