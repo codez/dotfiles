@@ -3,7 +3,7 @@
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
 	co = checkout
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lol = log --graph --decorate --pretty='%h%x09%an%x09%ad  %s' --date=format:'%d.%m.%Y %H:%M' --abbrev-commit
 [color]
 	diff = auto
 	status = auto
