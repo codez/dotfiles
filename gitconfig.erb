@@ -1,23 +1,25 @@
 [user]
-	name = Pascal Zumkehr
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  name = Pascal Zumkehr
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
-	co = checkout
+  co = checkout
   lol = log --graph --decorate --pretty='%h  %<(15,trunc)%an %ad  %s' --date=format:'%d.%m.%Y %H:%M' --abbrev-commit
+  lolh = ! git lol | head
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	#autocrlf = input
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = vim
+  #autocrlf = input
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [format]
-	#pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+  #pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
-	default = current
+  default = current
 [github]
-	user = codez
+  user = codez
