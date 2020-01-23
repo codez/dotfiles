@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rake'
 require 'erb'
 
@@ -5,8 +7,8 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE].include? file
-    
+    next if %w[Rakefile README.rdoc LICENSE vscode].include?(file)
+
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
         puts "identical ~/.#{file.sub('.erb', '')}"
@@ -30,10 +32,14 @@ task :install do
       link_file(file)
     end
   end
+
+  system 'mkdir -p ~/.config/Code/User'
+  system 'rm -f $HOME/.config/Code/User/settings.json'
+  system %(ln -s "$PWD/vscode/settings.json" "$HOME/.config/Code/User/settings.json")
 end
 
 def replace_file(file)
-  system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
+  system %(rm -rf "$HOME/.#{file.sub('.erb', '')}")
   link_file(file)
 end
 
@@ -45,6 +51,6 @@ def link_file(file)
     end
   else
     puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    system %(ln -s "$PWD/#{file}" "$HOME/.#{file}")
   end
 end

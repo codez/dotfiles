@@ -14,9 +14,12 @@ fi
 
 # load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-
 PATH=$PATH:$HOME/.rvm/bin
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # tune ruby gc with 37 signals
 export RUBY_GC_HEAP_INIT_SLOTS=600000 # This is 60(!) times larger than default

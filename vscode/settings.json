@@ -1,0 +1,25 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "window.zoomLevel": 0,
+    "[typescript]": {
+        "editor.formatOnSave": true,
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+    },
+    "[scss]": {
+        "editor.formatOnSave": true,
+    },
+    "[ruby]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "misogi.ruby-rubocop",
+    },
+    "editor.formatOnSaveTimeout": 5000,
+    "breadcrumbs.enabled": true,
+    "files.insertFinalNewline": true,
+    "ruby.format": "rubocop",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "workbench.settings.enableNaturalLanguageSearch": false
+}
