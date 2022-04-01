@@ -72,6 +72,3 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# do not show all kinds of warnings
-export RUBYOPT="-W1"

@@ -8,8 +8,5 @@ alias o='xdg-open'
 alias gits='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
-
-
 # changing directory to code project
 function c { cd ~/Code/$1; }
-
