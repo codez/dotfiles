@@ -3,6 +3,7 @@ alias cd..='cd ..'
 
 # Mac: Open file in editor
 alias e='open -t'
+alias o='xdg-open'
 
 alias gits='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"

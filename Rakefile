@@ -7,7 +7,7 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE vscode].include?(file)
+    next if %w[Rakefile README.rdoc LICENSE vscode bundle].include?(file)
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
@@ -33,9 +33,13 @@ task :install do
     end
   end
 
-  system 'mkdir -p ~/.config/Code/User'
+  system 'mkdir -p $HOME/.config/Code/User'
   system 'rm -f $HOME/.config/Code/User/settings.json'
   system %(ln -s "$PWD/vscode/settings.json" "$HOME/.config/Code/User/settings.json")
+
+  system 'mkdir -p $HOME/.bundle'
+  system 'rm -f $HOME/.bundle/config'
+  system %(ln -s "$PWD/bundle/config" "$HOME/.bundle/config")
 end
 
 def replace_file(file)

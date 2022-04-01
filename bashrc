@@ -1,3 +1,9 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/config
@@ -12,19 +18,12 @@ if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
 
-# load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# tune ruby gc with 37 signals
-export RUBY_GC_HEAP_INIT_SLOTS=600000 # This is 60(!) times larger than default
-export RUBY_GC_MALLOC_LIMIT=59000000 # This is 7 times larger than default
-export RUBY_HEAP_FREE_MIN=100000 # This is 24 times larger than default
-
-# do not show all kinds of warnings
-export RUBYOPT="-W1"

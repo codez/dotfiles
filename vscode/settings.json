@@ -2,7 +2,6 @@
     "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
     "diffEditor.ignoreTrimWhitespace": true,
-    "window.zoomLevel": 0,
     "[typescript]": {
         "editor.formatOnSave": true,
     },
@@ -21,5 +20,8 @@
     "files.insertFinalNewline": true,
     "ruby.format": "rubocop",
     "typescript.preferences.importModuleSpecifier": "relative",
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "extensions.ignoreRecommendations": false
 }
