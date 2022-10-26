@@ -31,3 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 export RUBYOPT="-W1"
 
 export NODE_OPTIONS=--max_old_space_size=16384
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

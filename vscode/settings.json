@@ -1,27 +1,35 @@
 {
-    "files.trimTrailingWhitespace": true,
-    "editor.tabSize": 2,
-    "diffEditor.ignoreTrimWhitespace": true,
-    "[typescript]": {
-        "editor.formatOnSave": true,
-    },
-    "[html]": {
-        "editor.formatOnSave": true,
-    },
-    "[scss]": {
-        "editor.formatOnSave": true,
-    },
-    "[ruby]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "misogi.ruby-rubocop",
-    },
-    "editor.formatOnSaveTimeout": 5000,
-    "breadcrumbs.enabled": true,
-    "files.insertFinalNewline": true,
-    "ruby.format": "rubocop",
-    "typescript.preferences.importModuleSpecifier": "relative",
-    "workbench.settings.enableNaturalLanguageSearch": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "extensions.ignoreRecommendations": false
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "breadcrumbs.enabled": true,
+  "files.insertFinalNewline": true,
+  "ruby.format": "rubocop",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "extensions.ignoreRecommendations": false,
+  "workbench.startupEditor": "none",
+  "liveshare.audio.joinCallBehavior": "accept",
+  "ruby.rubocop.useBundler": true,
+  "diffEditor.renderSideBySide": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.renderWhitespace": "all",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }

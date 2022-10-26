@@ -3,6 +3,7 @@
   email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
   co = checkout
+  cm = commit -m 
   lol = log --graph --decorate --pretty='%h  %<(15,trunc)%an %ad  %s' --date=format:'%d.%m.%Y %H:%M' --abbrev-commit
   lolh = ! git lol | head
   now = commit --amend --date=now
