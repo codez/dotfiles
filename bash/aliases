@@ -1,12 +1,9 @@
 alias ll='ls -alGh'
 alias cd..='cd ..'
 
-# Mac: Open file in editor
-alias e='open -t'
-alias o='xdg-open'
-
 alias gits='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
-# changing directory to code project
-function c { cd ~/Code/$1; }
+# Serve current directory with live reload
+# requires `npm install -g browser-sync`
+alias serve="browser-sync start -s -f . --no-notify --host localhost --port 9000"
